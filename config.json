@@ -1,0 +1,19 @@
+{
+    "state_management": "getx",
+    "modules": [
+        "Dashboard_courses",
+        "login",
+        "register",
+        "mainNavigation",
+        "profil",
+        "list Food",
+        "Food Form",
+        "Populer Resto",
+        "Populer Menu",
+        "resto Page",
+        "menu Resto page",
+        "List Promo",
+        "form Promo",
+        "detail promo"
+    ]
+}
