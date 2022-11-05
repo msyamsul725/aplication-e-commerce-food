@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hyper_ui/core.dart';
+import 'package:flutter_hyper_ui/shared/widget/radio/radio.dart';
 import 'package:get/get.dart';
 
 class DashboardFood extends StatelessWidget {
@@ -608,75 +609,42 @@ class DashboardFood extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
-                height: 140.0,
-                child: ListView.builder(
-                  itemCount: 10,
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) {
-                    return Container(
-                      width: 140,
-                      margin: const EdgeInsets.only(right: 10.0),
-                      decoration: BoxDecoration(
-                        image: const DecorationImage(
-                          image: NetworkImage(
-                            "https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=710&q=80",
-                          ),
-                          fit: BoxFit.cover,
-                        ),
-                        borderRadius: const BorderRadius.all(
-                          Radius.circular(16.0),
-                        ),
-                        color: Colors.blue[400],
-                      ),
-                      child: Stack(
-                        children: [
-                          Container(
-                            padding: const EdgeInsets.all(6.0),
-                            margin: const EdgeInsets.all(8.0),
-                            decoration: BoxDecoration(
-                              color: Colors.green[800],
-                              borderRadius: const BorderRadius.all(
-                                Radius.circular(
-                                  12.0,
-                                ),
-                              ),
-                            ),
-                            child: const Text(
-                              "PROMO",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 8.0,
-                              ),
-                            ),
-                          ),
-                          Positioned(
-                            bottom: 0,
-                            left: 0,
-                            right: 0,
-                            child: Container(
-                              padding: const EdgeInsets.all(12.0),
-                              decoration: const BoxDecoration(
-                                color: Colors.black38,
-                                borderRadius: BorderRadius.only(
-                                  bottomLeft: Radius.circular(16.0),
-                                  bottomRight: Radius.circular(16.0),
-                                ),
-                              ),
-                              child: const Text(
-                                "Avocado and Eeg Toast",
-                                overflow: TextOverflow.ellipsis,
-                                style: TextStyle(
-                                  fontSize: 11.0,
-                                  color: Colors.white,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    );
-                  },
+              const ExRadio(id: "gender", items: [
+                {
+                  "label": "male",
+                  "value": "Male",
+                },
+                {
+                  "label": "female",
+                  "value": "Female",
+                },
+                {
+                  "label": "heum",
+                  "value": "Heumale",
+                },
+              ]),
+              Container(
+                padding: const EdgeInsets.symmetric(vertical: 4.0),
+                width: MediaQuery.of(context).size.width,
+                child: const Text(
+                  "New Product",
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18.0,
+                  ),
+                ),
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(vertical: 4.0),
+                width: MediaQuery.of(context).size.width,
+                child: const Text(
+                  "New Product",
+                  textAlign: TextAlign.left,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18.0,
+                  ),
                 ),
               ),
             ],

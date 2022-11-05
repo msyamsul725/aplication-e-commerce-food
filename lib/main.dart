@@ -18,5 +18,5 @@ void main() async {
   return runApp(GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: defaultTheme,
-      home: FloatMainNavigationView()));
+      home: LoginView()));
 }
